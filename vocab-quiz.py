@@ -21,8 +21,8 @@ def quiz(voabulary):
     for mandarin, (pinyin, deutsch) in items:
         print(f"What is the meaning of {mandarin}({pinyin})?")
         answer = input().strip().lower()
-        if answer == deutsch.lower():
-            print("Richtig! Hier ein Keks: 🍪")
+        if answer in deutsch.lower():
+            print(f"Richtig! {deutsch}! Hier ein Keks: 🍪")
         else:
             print(f"Leider falsch :c Richtig ist {deutsch}")
             
